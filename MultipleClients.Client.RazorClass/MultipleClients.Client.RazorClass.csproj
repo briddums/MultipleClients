@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Pages\FetchData.razor.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Pages\FetchData.razor.css" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <SupportedPlatform Include="browser" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="6.0.0-rc.1.21452.15" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MultipleClients\Shared\MultipleClients.Shared.csproj" />
+  </ItemGroup>
+
+</Project>
