@@ -1,5 +1,7 @@
 # Description
-This project shows how to host razor components in a separate class library.  
+This project shows how to host razor components in a separate class library.  This allows for the Blazor Client to be split up into multiple modules.
+
+I find this to be useful for vertical slice architecture as it allows isolating client features in their own module instead of just their own directory.
 
 This is for a Blazor webassembly ASP.NET Core hosted app.
 
