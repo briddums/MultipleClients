@@ -73,7 +73,7 @@ Through testing, I found that I also needed to release the main client.  I guess
 So from a command line I would run:
 ```DOS
 C:\Client.RazorPage\dotnet publish -c release -o "C:\Path\To\Release\Dir"
-C:\Cleint\dotnet publish -c release -o "C:\Path\To\Release\Dir"
+C:\Client\dotnet publish -c release -o "C:\Path\To\Release\Dir"
 ```
 
 I would then copy the dll's published to our web server.
