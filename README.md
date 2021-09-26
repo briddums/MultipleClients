@@ -64,3 +64,18 @@ eg: @using MultipleClients.Client.RazorClass
 </div>
 
 ```
+
+# Releasing
+Releasing a separate client is not as easy as just releasing the dll for that project.  If this is done, the web app will not update with the changes for that dll.
+
+Through testing, I found that I also needed to release the main client.  I guess this is because Blazor WebAssembly won't reload child UI's unless it reloads the parent UI.  And it won't reload the parent UI unless a new version is released.
+
+So from a command line I would run:
+```DOS
+C:\Client.RazorPage\dotnet publish -c release -o "C:\Path\To\Release\Dir"
+C:\Cleint\dotnet publish -c release -o "C:\Path\To\Release\Dir"
+```
+
+I would then copy the dll's published to our web server.
+
+I did not find an easy way to publish via Visual Studio.  It's possible, but would require flagging each project as "Publish" vs "Do Not Publish", which would be a lot of work each time.  Doing it via command line (or automating it) is much easier
